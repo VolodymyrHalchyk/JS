@@ -171,7 +171,7 @@
 
 // - Відтворити роботу годинника, відрахувавши 2 хвилини (2 цикли! 1й - хвилини, 2й - секунди)
 
-// for (minutes = 0; minutes < 60; minutes++) {
+// for (let minutes = 0; minutes < 60; minutes++) {
 //         for (let seconds = 0; seconds < 60; seconds++) {
 //                 console.log(minutes + 'm ' + seconds + 's');
 //                 if (minutes == 2 && seconds == 0) break
