@@ -438,33 +438,44 @@ let pizza = {
 
 // - Дано 2 масиви з рівною кількістю об'єктів.
 // Масиви:
-// let usersWithId = [{id: 1, name: 'vasya', age: 31, status: false}, 
-// { id: 2, name: 'petya', age: 30, status: true },
-// { id: 3, name: 'kolya', age: 29, status: true },
-// { id: 4, name: 'olya', age: 28, status: false },];
+let usersWithId = [{id: 1, name: 'vasya', age: 31, status: false}, 
+{ id: 2, name: 'petya', age: 30, status: true },
+{ id: 3, name: 'kolya', age: 29, status: true },
+{ id: 4, name: 'olya', age: 28, status: false },];
 
-// let citiesWithId = [{ user_id: 3, country: 'USA', city: 'Portland' },
-// { user_id: 1, country: 'Ukraine', city: 'Ternopil' },
-// { user_id: 2, country: 'Poland', city: 'Krakow' },
-// { user_id: 4, country: 'USA', city: 'Miami' },];
+let citiesWithId = [{ user_id: 3, country: 'USA', city: 'Portland' },
+{ user_id: 1, country: 'Ukraine', city: 'Ternopil' },
+{ user_id: 2, country: 'Poland', city: 'Krakow' },
+{ user_id: 4, country: 'USA', city: 'Miami' },];
 // З'єднати в один об'єкт користувача та місто з відповідними "id" та "user_id" .
 // Записати цей об'єкт в новий масив
 // Частковий приклад реультату:
 // let usersWithCities = [{id: 1, name: 'vasya', age: 31, status: false, address: {user_id: 1, country: 'Ukraine', city: 'Ternopil'}}....]
 
-// let usersWithCities = [];
-// let address = {};
-// for (let i = 0; i < usersWithId.length; i++){
-//     usersWithCities.push(usersWithId[i])
-//     for (let j = 0; j < citiesWithId.length; j++){
-//         if (usersWithId.id == citiesWithId.user_id) {
-//             address.j = citiesWithId[j]
-//             console.log(address);
+// let usersWithCities = []
+// for (let obj of usersWithId) {
+//     let objectSum = obj;
+//     for (let obj2 of citiesWithId) {
+//         if (obj2.user_id == obj.id){
+//             objectSum.address = obj2;
 //         }
 //     }
+//     usersWithCities.push(obj);
 // }
-//    ДОРОБТИ!!!
+// console.log(usersWithCities);
 
+// _________________
+
+// let usersWithCities = JSON.parse(JSON.stringify(usersWithId));
+
+// for (let obj of usersWithCities) {
+//     for (obj2 of citiesWithId)
+//     if (obj.id == obj2.user_id) {
+//         obj.address = obj2;
+//     }
+// }
+// console.log(usersWithCities);
+// console.log(usersWithId);
 
 // - створити розмітці блок з id, class та текстом в середені. Зчитати окремо цей текст з селекторів по 
 // id, class та тегу
@@ -656,11 +667,14 @@ let pizza = {
 // ====class===
 // ============
 
-// - є сторінка rules.html. Контентом сторінки є заголовки та параграфи. Заголовки (h2) характеризують тему контенту яка вказана в параграфі.
-// створити скрипт, котрий зчитує всі заголовки, та робить в блоці з id=content з них список(ul>li), який буде змістом того, що знаходиться на сторінці.
+// - є сторінка rules.html. Контентом сторінки є заголовки та параграфи.
+// Заголовки(h2) характеризують тему контенту яка вказана в параграфі.
+// створити скрипт, котрий зчитує всі заголовки, та робить в блоці з id=content з них список(ul>li), 
+// який буде змістом того, що знаходиться на сторінці.
 // Скріпт повинен працювати навіть якщо кількість блоків з заголовком та параграфом зміниться.
 
-// -Є масив котрий характеризує правила. Створити скрипт який ітерує цей масив, та робить з кожне правило в окремому блоці.
+// -Є масив котрий характеризує правила. Створити скрипт який ітерує цей масив, та робить з кожне правило в окремому 
+// блоці.
 // При цому в блоці, номер правила записати в свій блок, текст правила записати в свій окремий блок.
 // Результатом відпрацювання скріпта повинна бути структура яка міститься в блоці wrap файла rule.html
 

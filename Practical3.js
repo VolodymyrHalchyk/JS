@@ -1,21 +1,21 @@
 
 // -- створити об'єкт (не меньше 5ти властивостей) який описує
 // - собаку
-let dog = {
-    name: 'Barbos',
-    breed: 'Dvorsterier',
-    color: 'Haki',
-    age: 7,
-    castration: false,
-}
+// let dog = {
+//     name: 'Barbos',
+//     breed: 'Dvorsterier',
+//     color: 'Haki',
+//     age: 7,
+//     castration: false,
+// }
 // - людину
-let human = {
-    name: 'Ivan',
-    age: 20,
-    country: 'Ukraine',
-    status: true,
-    wrok: false,
-}
+// let human = {
+//     name: 'Ivan',
+//     age: 20,
+//     country: 'Ukraine',
+//     status: true,
+//     wrok: false,
+// }
 // - автомобіль
 // let car = {
 //     model: 'Mers',
